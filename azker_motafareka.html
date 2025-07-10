@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أذكار متفرقة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Cairo',sans-serif;background:#f7f7f7;margin:0;padding:20px}
+    h1{text-align:center;color:#0c5c44}
+    .zekr-card{background:#fff;border-radius:15px;padding:20px;box-shadow:0 0 10px rgba(0,0,0,.05);margin:20px auto;max-width:700px;line-height:2}
+    .actions{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .actions button{background:#0c5c44;color:#fff;border:none;border-radius:10px;padding:8px 12px;cursor:pointer}
+    .counter{font-size:.9rem;color:#777;font-weight:bold}
+    a.back-link{display:block;text-align:center;margin-top:30px;text-decoration:none;color:#0c5c44}
+    audio{display:none}
+  </style>
+</head>
+<body>
+  <h1>📖 أذكار متفرقة 📖</h1>
+
+  <!-- 1: عند دخول المنزل -->
+  <div class="zekr-card">
+    <p>بسم الله ولجنا، وبسم الله خرجنا، وعلى الله ربنا توكلنا.</p>
+    <div class="actions">
+      <span id="counterx1" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="x1" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <!-- 2: عند الخروج من المنزل -->
+  <div class="zekr-card">
+    <p>بسم الله، توكلت على الله، ولا حول ولا قوة إلا بالله.</p>
+    <div class="actions">
+      <span id="counterx2" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="x2" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <!-- 3: بعد الوضوء -->
+  <div class="zekr-card">
+    <p>أشهد أن لا إله إلا الله وحده لا شريك له، وأشهد أن محمدًا عبده ورسوله.</p>
+    <div class="actions">
+      <span id="counterx3" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="x3" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <!-- 4: عند دخول الخلاء -->
+  <div class="zekr-card">
+    <p>اللهم إني أعوذ بك من الخبث والخبائث.</p>
+    <div class="actions">
+      <span id="counterx4" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="x4" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <!-- 5: بعد الطعام -->
+  <div class="zekr-card">
+    <p>الحمد لله الذي أطعمني هذا، ورزقنيه من غير حول مني ولا قوة.</p>
+    <div class="actions">
+      <span id="counterx5" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="x5" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <!-- 6: عند لبس الثوب -->
+  <div class="zekr-card">
+    <p>الحمد لله الذي كساني هذا الثوب، ورزقنيه من غير حول مني ولا قوة.</p>
+    <div class="actions">
+      <span id="counterx6" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="x6" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <!-- 7: عند رؤية مبتلى -->
+  <div class="zekr-card">
+    <p>الحمد لله الذي عافاني مما ابتلاك به، وفضلني على كثير ممن خلق تفضيلاً.</p>
+    <div class="actions">
+      <span id="counterx7" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="x7" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <!-- 8: عند نزول مكان -->
+  <div class="zekr-card">
+    <p>أعوذ بكلمات الله التامات من شر ما خلق.</p>
+    <div class="actions">
+      <span id="counterx8" class="counter">قال هذا الذكر: 0 / 3 مرات</span>
+      <button data-id="x8" data-max="3" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+    </div>
+  </div>
+
+  <a href="page.html" class="back-link">⬅️ الرجوع للصفحة الرئيسية</a>
+
+<script>
+  const counters = {};
+  function countZekr(btn){
+    const id = btn.dataset.id;
+    const max = parseInt(btn.dataset.max);
+    counters[id] = (counters[id]||0)+1;
+    const counterSpan = document.getElementById('counter'+id);
+    if(counterSpan){
+      counterSpan.textContent = `قال هذا الذكر: ${counters[id]} / ${max} مرات`;
+    }
+    if(counters[id]>=max){
+      btn.disabled=true;
+      btn.textContent='✅ تمَّ';
+    }
+  }
+  function copyZekr(btn){
+    const text = btn.parentElement.previousElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(()=>{
+      btn.textContent='✅ تم النسخ';
+      setTimeout(()=>btn.textContent='📋 نسخ',1500);
+    });
+  }
+</script>
+</body>
+</html>

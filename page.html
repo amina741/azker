@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مفكرة الأذكار اليومية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Cairo',sans-serif;background:#f9f9f9;color:#333;margin:0;padding:20px}
+    header{text-align:center;margin-bottom:30px}
+    header h1{font-size:2rem;color:#0c5c44}
+    nav{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:30px}
+    nav a{text-decoration:none;color:#fff;background:#0c5c44;padding:10px 20px;border-radius:20px;transition:.3s}
+    nav a:hover{background:#0a4b39}
+    .zekr-card{background:#fff;border-radius:15px;padding:20px;box-shadow:0 0 10px rgba(0,0,0,.05);margin:20px auto;max-width:600px;line-height:2}
+    .actions{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .actions button{background:#0c5c44;color:#fff;border:none;border-radius:10px;padding:8px 12px;cursor:pointer}
+    .counter{font-size:.9rem;color:#777;font-weight:bold}
+    audio{display:none}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌿 مفكرة الأذكار اليومية 🌿</h1>
+    <p>حافظ على وردك اليومي من الأذكار لتطمئن نفسك 💚</p>
+  </header>
+
+  <nav>
+    <a href="azker_sabe7.html">أذكار الصباح</a>
+    <a href="azker_masaa.html">أذكار المساء</a>
+    <a href="azker_noum.html">أذكار النوم</a>
+    <a href="azker_motafareka.html">أذكار متفرقة</a>
+  </nav>
+
+  <!-- بطاقة مثال مع عدّاد -->
+  <div class="zekr-card">
+    <p>اللهم بك أصبحنا وبك أمسينا وبك نحيا وبك نموت وإليك النشور.</p>
+    <div class="actions">
+      <span id="counter-demo" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="demo" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audio-demo').play()">🔊 استماع</button>
+    </div>
+    <audio id="audio-demo" src="audio/sabah2.mp3"></audio>
+  </div>
+
+<script>
+  const counters = {};
+  function countZekr(btn){
+    const id = btn.dataset.id;
+    const max = parseInt(btn.dataset.max);
+    counters[id] = (counters[id]||0)+1;
+    const counterSpan = document.getElementById('counter-'+id) || document.getElementById('counter-'+id) || document.querySelector('#counter-'+id) || document.querySelector('#counter-demo');
+    if(counterSpan){
+      counterSpan.textContent = `قال هذا الذكر: ${counters[id]} / ${max} مرات`;
+    }
+    if(counters[id]>=max){
+      btn.disabled=true;
+      btn.textContent='✅ تمَّ';
+    }
+  }
+  function copyZekr(btn){
+    const text = btn.parentElement.previousElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(()=>{
+      btn.textContent='✅ تم النسخ';
+      setTimeout(()=>btn.textContent='📋 نسخ',1500);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أذكار المساء</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Cairo',sans-serif;background:#f5f7f9;margin:0;padding:20px}
+    h1{text-align:center;color:#0c5c44}
+    .zekr-card{background:#fff;border-radius:15px;padding:20px;box-shadow:0 0 10px rgba(0,0,0,.05);margin:20px auto;max-width:700px;line-height:2}
+    .actions{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .actions button{background:#0c5c44;color:#fff;border:none;border-radius:10px;padding:8px 12px;cursor:pointer}
+    .counter{font-size:.9rem;color:#777;font-weight:bold}
+    a.back-link{display:block;text-align:center;margin-top:30px;text-decoration:none;color:#0c5c44}
+    audio{display:none}
+  </style>
+</head>
+<body>
+  <h1>🌇 أذكار المساء 🌇</h1>
+
+  <!-- 1 -->
+  <div class="zekr-card">
+    <p>"أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له،
+        له الملك وله الحمد، وهو على كل شيء قدير.
+        ربِّ أسألك خير ما في هذه الليلة وخير ما بعدها،
+        وأعوذ بك من شر ما في هذه الليلة وشر ما بعدها،
+        ربِّ أعوذ بك من الكسل وسوء الكِبَر، ربِّ أعوذ بك من عذاب في النار وعذاب في القبر."</p>
+    <div class="actions">
+      <span id="counterm1" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="m1" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom1').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom1" src="audio/masaa1.mp3"></audio>
+  </div>
+
+  <!-- 2 -->
+  <div class="zekr-card">
+    <p>اللهم بك أمسينا، وبك أصبحنا، وبك نحيا، وبك نموت، وإليك المصير.</p>
+    <div class="actions">
+      <span id="counterm2" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="m2" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom2').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom2" src="audio/masaa2.mp3"></audio>
+  </div>
+
+  <!-- 3 -->
+  <div class="zekr-card">
+    <p>رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.</p>
+    <div class="actions">
+      <span id="counterm3" class="counter">قال هذا الذكر: 0 / 3 مرات</span>
+      <button data-id="m3" data-max="3" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 4 -->
+  <div class="zekr-card">
+    <p>اللهم إني أمسيتُ أشهدك، وأشهد حملة عرشك، وملائكتك، وجميع خلقك،
+        أنك أنت الله لا إله إلا أنت وحدك لا شريك لك، وأن محمدًا عبدك ورسولك</p>
+    <div class="actions">
+      <span id="counterm4" class="counter">قال هذا الذكر: 0 / 4 مرات</span>
+      <button data-id="m4" data-max="4" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 5 -->
+  <div class="zekr-card">
+    <p>اللهم ما أمسى بي من نعمة أو بأحدٍ من خلقك، فمنك وحدك لا شريك لك،
+        فلك الحمد ولك الشكر</p>
+    <div class="actions">
+      <span id="counterm5" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="m5" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 6 -->
+  <div class="zekr-card">
+    <p>حسبي الله لا إله إلا هو، عليه توكلت، وهو رب العرش العظيم.</p>
+    <div class="actions">
+      <span id="counterm6" class="counter">قال هذا الذكر: 0 / 7 مرات</span>
+      <button data-id="m6" data-max="7" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 7 -->
+  <div class="zekr-card">
+    <p>اللهم عافني في بدني، اللهم عافني في سمعي، اللهم عافني في بصري، لا إله إلا أنت.
+        اللهم إني أعوذ بك من الكفر والفقر، وأعوذ بك من عذاب القبر، لا إله إلا أنت</p>
+    <div class="actions">
+      <span id="counterm7" class="counter">قال هذا الذكر: 0 / 3 مرات</span>
+      <button data-id="m7" data-max="3" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 8 -->
+  <div class="zekr-card">
+    <p>يا حي يا قيوم برحمتك أستغيث، أصلح لي شأني كله، ولا تكلني إلى نفسي طرفة عين</p>
+    <div class="actions">
+      <span id="counterm8" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="m8" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 9 -->
+  <div class="zekr-card">
+    <p>أمسينا على فطرة الإسلام، وعلى كلمة الإخلاص، وعلى دين نبينا محمد ﷺ،
+        وعلى ملة أبينا إبراهيم حنيفًا مسلمًا وما كان من المشركين</p>
+    <div class="actions">
+      <span id="counterm9" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="m9" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 10 -->
+  <div class="zekr-card">
+    <p>لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيء قدير</p>
+    <div class="actions">
+      <span id="counterm10" class="counter">قال هذا الذكر: 0 / 10 مرات</span>
+      <button data-id="m10" data-max="10" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 11 -->
+  <div class="zekr-card">
+    <p>أعوذ بكلمات الله التامات من شر ما خلق</p>
+    <div class="actions">
+      <span id="counterm11" class="counter">قال هذا الذكر: 0 / 3 مرات</span>
+      <button data-id="m11" data-max="3" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 12 -->
+  <div class="zekr-card">
+    <p>اللهم صل وسلم على نبينا محمد</p>
+    <div class="actions">
+      <span id="counterm11" class="counter">قال هذا الذكر: 0 / 10 مرات</span>
+      <button data-id="m12" data-max="10" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 13 -->
+  <div class="zekr-card">
+    <p>قراءة آية الكرسي:
+        "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ" (البقرة: 255)
+      </p>    <div class="actions">
+      <span id="counterm13" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="m13" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 14 -->
+  <div class="zekr-card">
+    <p>ءَامَنَ ٱلرَّسُولُ بِمَآ أُنزِلَ إِلَيۡهِ مِن رَّبِّهِۦ وَٱلۡمُؤۡمِنُونَۚ كُلٌّ ءَامَنَ بِٱللَّهِ وَمَلَٰٓئِكَتِهِۦ وَكُتُبِهِۦ وَرُسُلِهِۦ لَا نُفَرِّقُ بَيۡنَ أَحَدٖ مِّن رُّسُلِهِۦۚ وَقَالُواْ سَمِعۡنَا وَأَطَعۡنَاۖ غُفۡرَانَكَ رَبَّنَا وَإِلَيۡكَ ٱلۡمَصِيرُ (*) لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَاۚ لَهَا مَا كَسَبَتۡ وَعَلَيۡهَا مَا ٱكۡتَسَبَتۡۗ رَبَّنَا لَا تُؤَاخِذۡنَآ إِن نَّسِينَآ أَوۡ أَخۡطَأۡنَاۚ رَبَّنَا وَلَا تَحۡمِلۡ عَلَيۡنَآ إِصۡرٗا كَمَا حَمَلۡتَهُۥ عَلَى ٱلَّذِينَ مِن قَبۡلِنَاۚ رَبَّنَا وَلَا تُحَمِّلۡنَا مَا لَا طَاقَةَ لَنَا بِهِۦۖ وَٱعۡفُ عَنَّا وَٱغۡفِرۡ لَنَا وَٱرۡحَمۡنَآۚ أَنتَ مَوۡلَىٰنَا فَٱنصُرۡنَا عَلَى ٱلۡقَوۡمِ ٱلۡكَٰفِرِينَ 
+        "من قرا اخر ايتين من سورة البقرة في ليلته كفتاه"
+    </p>
+    <div class="actions">
+      <span id="counterm14" class="counter">قال هذا الذكر: 0 / 1 مرات</span>
+      <button data-id="m14" data-max="1" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 15 -->
+  <div class="zekr-card">
+    <p>سورة الإخلاص:بسم الله الرحمن الرحيم.
+        قُلۡ هُوَ ٱللَّهُ أَحَدٌ (1) ٱللَّهُ ٱلصَّمَدُ (2) لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ (3) وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ (4)
+     </p>
+    <div class="actions">
+      <span id="counterm15" class="counter">قال هذا الذكر: 0 / 3 مرات</span>
+      <button data-id="m15" data-max="3" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 16 -->
+  <div class="zekr-card">
+    <p>سورة الفلق:بسم الله الرحمن الرحيم
+        قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)
+      </p>
+    <div class="actions">
+      <span id="counterm16" class="counter">قال هذا الذكر: 0 / 3 مرات</span>
+      <button data-id="m16" data-max="3" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 17 -->
+  <div class="zekr-card">
+    <p>سورة الناس:بسم الله الرحمن الرحيم
+        قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ (1) مَلِكِ ٱلنَّاسِ (2) إِلَٰهِ ٱلنَّاسِ (3) مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ (4) ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ (5) مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ (6)
+      </p>
+    <div class="actions">
+      <span id="counterm17" class="counter">قال هذا الذكر: 0 / 3 مرات</span>
+      <button data-id="m17" data-max="3" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  <!-- 18 -->
+  <div class="zekr-card">
+    <p>سبحان الله وبحمده</p>
+    <div class="actions">
+      <span id="counterm18" class="counter">قال هذا الذكر: 0 / 100 مرات</span>
+      <button data-id="m18" data-max="100" onclick="countZekr(this)">📿 اضغط للتكرار</button>
+      <button onclick="copyZekr(this)">📋 نسخ</button>
+      <button onclick="document.getElementById('audiom3').play()">🔊 استماع</button>
+    </div>
+    <audio id="audiom3" src="audio/masaa3.mp3"></audio>
+  </div>
+  
+  <a href="page.html" class="back-link">⬅️ الرجوع للصفحة الرئيسية</a>
+
+<script>
+  const counters = {};
+  function countZekr(btn){
+    const id = btn.dataset.id;
+    const max = parseInt(btn.dataset.max);
+    counters[id] = (counters[id]||0)+1;
+    const counterSpan = document.getElementById('counter'+id);
+    if(counterSpan){
+      counterSpan.textContent = `قال هذا الذكر: ${counters[id]} / ${max} مرات`;
+    }
+    if(counters[id]>=max){
+      btn.disabled=true;
+      btn.textContent='✅ تمَّ';
+    }
+  }
+  function copyZekr(btn){
+    const text = btn.parentElement.previousElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(()=>{
+      btn.textContent='✅ تم النسخ';
+      setTimeout(()=>btn.textContent='📋 نسخ',1500);
+    });
+  }
+</script>
+</body>
+</html>
